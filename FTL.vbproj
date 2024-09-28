@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{1CEA6813-29A7-4216-8F31-0C6F93530DB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>FTL</RootNamespace>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\push-to-checkout.sample" />
+    <None Include=".git\hooks\sendemail-validate.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\main" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\main" />
+    <None Include=".git\objects\1c\4bd13beba70a90c05b609816f1bf3df81acaa8" />
+    <None Include=".git\objects\24\d2c0616f39466f4dfbcb353feed7b92810937b" />
+    <None Include=".git\objects\25\d6629f1b9390fcab6d7c8af87805fb3b0a2c6b" />
+    <None Include=".git\objects\4c\d492d57c3cbb30acd3daf508279d6d5e96e9a1" />
+    <None Include=".git\objects\5a\fceea5f10ae5bbee00e5cbc0a2ca6ef04c19e4" />
+    <None Include=".git\objects\5e\ac464edd134756466fa2ca66bfb43a59b9b5ee" />
+    <None Include=".git\objects\6b\6114114f4e89a1f2d0e911ff090e541af1260c" />
+    <None Include=".git\objects\96\d015924e6f809e9a9c87aec032248b154ad266" />
+    <None Include=".git\objects\a1\c4acc7380a527b673895c90ed7acd204402d87" />
+    <None Include=".git\objects\af\9bbb1784929669424b6fade8c1e60624e5d1e1" />
+    <None Include=".git\objects\b4\c484e9bf954474ee222d6f9464c82aa817de41" />
+    <None Include=".git\objects\d1\d355d4afb2422d73e8646d9f770c2f2dd39a6a" />
+    <None Include=".git\objects\d9\b5be4d34f930e37bd73356fb28e5e416bae63e" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\refs\heads\main" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\main" />
+    <None Include=".vs\FTL-Fall24-Hackathon\config\applicationhost.config" />
+    <None Include=".vs\FTL-Fall24-Hackathon\FileContentIndex\20eec4a0-3159-4d45-8107-e4793a6a11e7.vsidx" />
+    <None Include=".vs\FTL-Fall24-Hackathon\FileContentIndex\39c8994a-ba1f-49d9-9a5a-c5f6b95a29d2.vsidx" />
+    <None Include=".vs\FTL-Fall24-Hackathon\FileContentIndex\555f0abf-d29d-4cd6-a461-eecf559fcfd3.vsidx" />
+    <None Include=".vs\FTL-Fall24-Hackathon\FileContentIndex\5f1444b5-8791-4b97-9ab8-c9d25dd3c5f6.vsidx" />
+    <None Include=".vs\FTL-Fall24-Hackathon\FileContentIndex\e1580265-f3e4-4544-88c6-2eb8550135bf.vsidx" />
+    <None Include=".vs\FTL-Fall24-Hackathon\v17\.wsuo" />
+    <None Include=".vs\FTL-Fall24-Hackathon\v17\DocumentLayout.backup.json" />
+    <None Include=".vs\FTL-Fall24-Hackathon\v17\DocumentLayout.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="project\index.html" />
+    <Content Include="project\script.js" />
+    <Content Include="project\style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\FTL\v17\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
