@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Username Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("stars.webp");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+        }
+          img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+          
+            animation: drop-in 1s ease-out forwards;
+            transform: translateY(-100vh); 
+        }
+        
+        @keyframes drop-in {
+            0% {
+                transform: translateY(-100vh); 
+            }
+            100% {
+                transform: translateY(0);
+        }
+        }img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #322142;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #221d37;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src= "C:\Users\dkous\OneDrive\Desktop\Python Programming\Basics Learning File\Hackathon 2024\spamclickgofast2.png" alt="Placeholder Image">
+        <form action="newpage.html" method="get">
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
