@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\sweee\\Documents\\GitHub\\FTL-Fall24-Hackathon\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{1CEA6813-29A7-4216-8F31-0C6F93530DB6}|FTL.vbproj|c:\\users\\sweee\\documents\\github\\ftl-fall24-hackathon\\project\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1CEA6813-29A7-4216-8F31-0C6F93530DB6}|FTL.vbproj|solutionrelative:project\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\sweee\\Documents\\GitHub\\FTL-Fall24-Hackathon\\project\\index.html",
-              "RelativeDocumentMoniker": "project\\index.html",
-              "ToolTip": "C:\\Users\\sweee\\Documents\\GitHub\\FTL-Fall24-Hackathon\\project\\index.html",
-              "RelativeToolTip": "project\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-09-28T17:33:12.646Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
