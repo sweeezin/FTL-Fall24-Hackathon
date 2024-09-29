@@ -1,78 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faster Than Light</title>
+    <link href="ftl.css" rel="stylesheet" />
     <style>
-        body {
-            background-image: url("stars.webp");
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            margin: 0; /* Remove default margin */
-        }
+        h1 {
+    color: white;
+    text-align: left;
+  }
 
-        /* Rectangle styles */
-        .animated-bar {
-            width: 20px; /* Width of the red rectangle */
-            height: 20px; /* Height of the rectangle */
-            background-color: rgb(241, 31, 31); /* Red color */
-            border-radius: 5px; /* Rounded corners */
-            position: fixed; /* Position it absolutely to move it */
-            z-index: 2; /* Ensure it overlays on other elements */
-        }
+
+body {
+    background-image: url("stars.webp");
+    overflow: hidden;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Center vertically */
+    height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+/* Main container for rectangles */
+.black-square {
+  position: relative; /* Make the container position relative */
+}
+
+/* Rectangle styles */
+.rectangle {
+    width: 800px; /* Rectangle width */
+    height: 20px; /* Rectangle height */
+    background-color: greenyellow; /* Green color for rectangles */
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: width 1s ease;
+    margin-bottom: 60px; /* Add spacing between rectangles */
+}
+
+/* Animated bar styles */
+.animated-bar {
+  width: 20px; /* Start with zero width */
+  height: 20px; /* Same height as rectangles */
+  background-color: rgb(241, 31, 31); /* Red color */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: fixed; /* Position it absolutely to move it */
+  top: 89px; /* Align with the top of the rectangles */
+  left: 0; /* Start from the left */
+  z-index: 2; /* Ensure it overlays on top of rectangles */
+  animation: moveBar 100s linear forwards; /* Animation properties */
+}
+
+.animated-bar2 {
+  width: 20px; /* Start with zero width */
+  height: 20px; /* Same height as rectangles */
+  background-color: rgb(241, 31, 31); /* Red color */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: fixed; /* Position it absolutely to move it */
+  top: 227px; /* Align with the top of the rectangles */
+  left: 0; /* Start from the left */
+  z-index: 2; /* Ensure it overlays on top of rectangles */
+  animation: moveBar 15s linear forwards; /* Animation properties */
+}
+
+.animated-bar3 {
+  width: 20px; /* Start with zero width */
+  height: 20px; /* Same height as rectangles */
+  background-color: rgb(241, 31, 31); /* Red color */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: fixed; /* Position it absolutely to move it */
+  top: 366px;/* Align with the top of the rectangles */
+  left: 0; /* Start from the left */
+  z-index: 2; /* Ensure it overlays on top of rectangles */
+  animation: moveBar 25s linear forwards; /* Animation properties */
+}
+
+.animated-bar4 {
+  width: 20px; /* Start with zero width */
+  height: 20px; /* Same height as rectangles */
+  background-color: rgb(241, 31, 31); /* Red color */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: fixed; /* Position it absolutely to move it */
+  top: 505.5px;/* Align with the top of the rectangles */
+  left: 0; /* Start from the left */
+  z-index: 2; /* Ensure it overlays on top of rectangles */
+  animation: moveBar 0.5s linear forwards; /* Animation properties */
+}
+
+.animated-bar5 {
+  width: 20px; /* Start with zero width */
+  height: 20px; /* Same height as rectangles */
+  background-color: rgb(241, 31, 31); /* Red color */
+  border-radius: 5px; /* Optional: Rounded corners */
+  position: fixed; /* Position it absolutely to move it */
+  top: 645px;/* Align with the top of the rectangles */
+  left: 355px; /* Start from the left */
+  z-index: 2; /* Ensure it overlays on top of rectangles */
+}
+
+/* Keyframes for the animation */
+@keyframes moveBar {
+  0% {
+      left: 355px; /* Start from the left */
+  }
+  100% {
+      left: 1150px; /* Move to the right */
+  }
+}
     </style>
 </head>
 <body>
     <div class="black-square">
         <h1>Racoon</h1>
         <div class="rectangle"></div>
+        <div class="animated-bar"></div>
+
         <h1>ISS</h1>
         <div class="rectangle"></div>
+        <div class="animated-bar2"></div>
+
         <h1>Anmol</h1>
         <div class="rectangle"></div>
+        <div class="animated-bar3"></div>
+
         <h1>Light</h1>
         <div class="rectangle"></div>
+        <div class="animated-bar4"></div>
+
         <h1>USER</h1>
         <div class="rectangle"></div>
+        <div class="animated-bar5" id="user-bar" style="animation-delay: 4s;"></div>
+        
+        <button id="clickCounterBtn">Click Me!</button>
+        <p id="clickCountDisplay">Clicks: 0</p>
     </div>
 
     <script>
-        const animatedBar = document.createElement('div');
-        animatedBar.className = 'animated-bar';
-        document.body.appendChild(animatedBar);
+      let clickCount = 0; // Initialize click counter
 
-        document.addEventListener('contextmenu', (event) => {
-            event.preventDefault(); // Prevent the context menu from appearing
+      document.getElementById('clickCounterBtn').addEventListener('click', function() {
+          clickCount++; // Increment the click counter
+          document.getElementById('clickCountDisplay').innerText = `Clicks: ${clickCount}`; // Update display
 
-            // Set the initial position of the animated bar
-            animatedBar.style.left = '0px';
-            animatedBar.style.top = `${event.clientY}px`;
-
-            // Animate the rectangle to move across the screen
-            let startPosition = 0;
-            const endPosition = window.innerWidth - 20; // Adjust for the rectangle's width
-
-            const animationDuration = 2000; // Duration of the animation in milliseconds
-            const frameRate = 60; // Frames per second
-            const totalFrames = (animationDuration / 1000) * frameRate;
-            const distancePerFrame = (endPosition - startPosition) / totalFrames;
-            let currentFrame = 0;
-
-            const moveRectangle = () => {
-                if (currentFrame < totalFrames) {
-                    startPosition += distancePerFrame;
-                    animatedBar.style.left = `${startPosition}px`;
-                    currentFrame++;
-                    requestAnimationFrame(moveRectangle);
-                }
-            };
-
-            moveRectangle();
-        });
-    </script>
+          // Update animation speed based on click count
+          const animatedBar = document.getElementById('user-bar');
+          const duration = Math.max(1, 40 - (clickCount - 90 * 0.5)); // Adjust the formula as needed
+          animatedBar.style.animationDuration = `${duration}s`;
+          animatedBar.style.animation = `moveBar ${duration}s linear forwards`; // Restart animation
+          
+          // Stop the bar after the animation ends
+          animatedBar.addEventListener('animationend', function() {
+              animatedBar.style.animation = 'none'; // Stop the animation
+          }, { once: true }); // Ensure this runs only once
+      });
+  </script>
 </body>
 </html>

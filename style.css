@@ -1,0 +1,32 @@
+h1 {
+    color: white;
+    text-align: left;
+  }
+
+body {
+    background-image: url("stars.webp");
+    overflow: hidden;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+.rectangle {
+    width: 800px; 
+    height: 20px;
+    background-color: greenyellow; 
+    border-radius: 5px;
+    transition: width 1s ease;
+    margin-bottom: 60px; 
+}
+
+
+
+.flag {
+  position: absolute; /* Use absolute positioning */
+  right: 100px; /* Adjust as needed for spacing */
+  top: 300px; /* Adjust as needed for vertical position */
+  width: 42px;
+  height: 42px;
+}
