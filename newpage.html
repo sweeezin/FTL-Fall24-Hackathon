@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faster Than Light</title>
+    <style>
+        body {
+            background-image: url("stars.webp");
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Rectangle styles */
+        .animated-bar {
+            width: 20px; /* Width of the red rectangle */
+            height: 20px; /* Height of the rectangle */
+            background-color: rgb(241, 31, 31); /* Red color */
+            border-radius: 5px; /* Rounded corners */
+            position: fixed; /* Position it absolutely to move it */
+            z-index: 2; /* Ensure it overlays on other elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="black-square">
+        <h1>Racoon</h1>
+        <div class="rectangle"></div>
+        <h1>ISS</h1>
+        <div class="rectangle"></div>
+        <h1>Anmol</h1>
+        <div class="rectangle"></div>
+        <h1>Light</h1>
+        <div class="rectangle"></div>
+        <h1>USER</h1>
+        <div class="rectangle"></div>
+    </div>
+
+    <script>
+        const animatedBar = document.createElement('div');
+        animatedBar.className = 'animated-bar';
+        document.body.appendChild(animatedBar);
+
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault(); // Prevent the context menu from appearing
+
+            // Set the initial position of the animated bar
+            animatedBar.style.left = '0px';
+            animatedBar.style.top = `${event.clientY}px`;
+
+            // Animate the rectangle to move across the screen
+            let startPosition = 0;
+            const endPosition = window.innerWidth - 20; // Adjust for the rectangle's width
+
+            const animationDuration = 2000; // Duration of the animation in milliseconds
+            const frameRate = 60; // Frames per second
+            const totalFrames = (animationDuration / 1000) * frameRate;
+            const distancePerFrame = (endPosition - startPosition) / totalFrames;
+            let currentFrame = 0;
+
+            const moveRectangle = () => {
+                if (currentFrame < totalFrames) {
+                    startPosition += distancePerFrame;
+                    animatedBar.style.left = `${startPosition}px`;
+                    currentFrame++;
+                    requestAnimationFrame(moveRectangle);
+                }
+            };
+
+            moveRectangle();
+        });
+    </script>
+</body>
+</html>

@@ -6,12 +6,15 @@
   "scripts": {
     "start": "npm run open",
     "open": "concurrently \"http-server -a localhost -p 8080\" \"open http://localhost:8080/build\""
- },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^9.0.1",
     "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
   }
 }
